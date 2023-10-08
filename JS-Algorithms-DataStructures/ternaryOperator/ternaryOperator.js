@@ -1,5 +1,7 @@
 function checkEqual(a, b) {
 
-}
-
-checkEqual(1, 2);
+    return a === b ? "Equal" : "Not Equal";
+  
+  }
+  
+  checkEqual(1, 2);
