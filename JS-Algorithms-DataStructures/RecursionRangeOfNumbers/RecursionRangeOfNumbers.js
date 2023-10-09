@@ -8,5 +8,5 @@ function rangeOfNumbers(startNum, endNum) {
     }
   }
   
-  //
+  
   console.log(rangeOfNumbers(1, 5)); 
