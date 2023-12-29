@@ -24,6 +24,7 @@ let user = {
 
 function addFriend(userObj, friend) {
     // change code below this line
+    // user object içerisindeki data.friends verilerini friend argümanına pushluyoruz.
     userObj.data.friends.push(friend);
     return userObj.data.friends;
     // change code above this line
