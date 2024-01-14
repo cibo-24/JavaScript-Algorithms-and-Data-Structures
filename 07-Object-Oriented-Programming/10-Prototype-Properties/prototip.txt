@@ -1,0 +1,30 @@
+Yinelenen Kodu Azaltmak için Prototip Özelliklerini Kullanın
+
+numLegs muhtemelen tüm Bird örnekleri için aynı değere sahip olacağından, aslında her Bird örneğinin içinde çoğaltılmış bir numLegs değişkeniniz vardır.
+
+Yalnızca iki örnek olduğunda bu bir sorun olmayabilir, ancak milyonlarca örnek olduğunu düşünün. Bu çok fazla yinelenen değişken anlamına gelecektir.
+
+Daha iyi bir yol Bird'ün prototipini kullanmaktır. Prototipteki özellikler Bird'ün TÜM örnekleri arasında paylaşılır. Bird prototipine numLegs özelliğinin nasıl ekleneceği aşağıda açıklanmıştır:
+
+
+Bird.prototype.numLegs = 2;
+console.log(duck.numLegs);
+console.log(canary.numLegs);
+
+Örnekte Dog func objectine numLegs özelliği ekliyoruz.
+
+Amaç aslında şu, Ana objemizin içerisinde bir property var ise bunu tüm kopya objectler alacaktır. Buda çok fazla kopya objectlerde soruna yol açabilir.
+
+Bu durumda Ana objectin bir propertysini prototype ile dışarıda tanımlar isek, kopya Object'ler bu property'i almazlar.
+
+
+// Ana object Dog 
+Dog.prototype.name = "Duman";
+
+
+
+
+
+
+
+

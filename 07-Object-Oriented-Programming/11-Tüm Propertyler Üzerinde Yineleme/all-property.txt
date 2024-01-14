@@ -1,0 +1,33 @@
+Tüm Özellikler Üzerinde Yineleme
+
+Şimdi iki tür özellik gördünüz: kendi özellikleri ve prototip özellikleri. Kendi özellikleri doğrudan nesne örneğinin kendisinde tanımlanır. 
+Prototip özellikleri ise prototip üzerinde tanımlanır.
+
+function Bird (name) {
+    this.name = name; // kendi özelliği
+}
+
+Bird.prototype.numLegs = 2; // prototype özelliği 
+
+let duck = new Bird ("Donald);
+
+
+!!!!!!!!!!!!!!!!
+Ördeğin kendi özelliklerini ownProps dizisine ve prototip özelliklerini prototypeProps dizisine nasıl ekleyeceğiniz aşağıda açıklanmıştır:
+
+let ownProps = [];
+let prototypeProps = [];
+
+for(let property in duck ) {
+    if(duck.hasOwnProperty(property)){
+        ownProps.push(property);
+    }else {
+        prototypeProps.push(property);
+    }
+}
+
+console.log(ownProps);
+konsolda ["name"] öğesini görüntüler
+
+console.log(prototypeProps);
+ ["numLegs"] öğesini görüntüler.

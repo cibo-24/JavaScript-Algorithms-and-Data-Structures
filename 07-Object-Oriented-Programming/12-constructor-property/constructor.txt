@@ -1,0 +1,25 @@
+Kurucu Özelliğini Anlama
+Önceki zorluklarda oluşturulan duck ve beagle nesne örneklerinde bulunan özel bir kurucu özelliği vardır:
+
+let duck = new Bird();
+let beagle = new Bird();
+
+console.log(duck.constructor === Bird); // true 
+console.log(beagle.constructor === Dog); // true
+
+
+Yapıcı (constructor) özelliğinin, örneği oluşturan yapıcı fonksiyona bir referans olduğunu unutmayın. Yapıcı özelliğinin avantajı, ne tür bir nesne olduğunu bulmak için bu özelliği kontrol etmenin mümkün olmasıdır. İşte bunun nasıl kullanılabileceğine dair bir örnek:
+
+function Bird(name) {
+  this.name = name;
+}
+
+function joinBirdFraternity(candidate) {
+  if (candidate.constructor === Bird) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Not: Yapıcı özelliğinin üzerine yazılabildiğinden (sonraki iki zorlukta ele alınacaktır), bir nesnenin türünü kontrol etmek için genellikle instanceof yöntemini kullanmak daha iyidir.
