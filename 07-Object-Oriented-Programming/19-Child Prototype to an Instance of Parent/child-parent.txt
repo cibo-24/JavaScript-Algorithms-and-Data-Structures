@@ -1,0 +1,14 @@
+Çocuğun Prototipini Ebeveynin Bir Örneğine Ayarlama
+
+Bir önceki bölümde Animal üst türünden (ya da ebeveyninden) davranış devralmanın ilk adımını görmüştünüz: Animal'ın yeni bir örneğini oluşturmak.
+
+Bu zorluk bir sonraki adımı kapsar: alt türün (veya çocuğun) prototipini - bu durumda Bird - bir Animal örneği olarak ayarlayın.
+
+Bird.prototype = Object.create(Animal.prototype);
+
+Prototipin bir nesne oluşturmak için kullanılan "tarif" gibi olduğunu unutmayın. Bir bakıma, Bird'ün tarifi artık Animal'daki tüm temel "malzemeleri" içeriyor.
+
+let duck = new Bird("Donal");
+duck.eat();
+
+duck, eat yöntemi de dahil olmak üzere Animal'ın tüm özelliklerini miras alır. Çünkü Bird artık Animal'in tüm prototype'lerini almıştı.

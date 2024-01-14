@@ -1,0 +1,38 @@
+Kendinizi Tekrar Etmemek İçin Kalıtım Kullanın
+
+Programlamada Kendini Tekrar Etme (DRY) adı verilen bir ilke vardır. Tekrarlanan kodun bir sorun olmasının nedeni, herhangi bir değişikliğin birden fazla yerde kodu düzeltmeyi gerektirmesidir. Bu genellikle programcılar için daha fazla iş ve hatalar için daha fazla alan anlamına gelir.
+
+Aşağıdaki örnekte, tarif yönteminin Bird ve Dog tarafından paylaşıldığına dikkat edin:
+
+Bird.prototype = {
+    constructor: Bird,
+    describe: function () {
+        console.log(this.name);
+    }
+}
+
+Dog.prototype = {
+    constructor: Dog,
+    describe: function (){
+        console.log(this.name);
+    }
+}
+
+describe yöntemi iki yerde de tekrarlanmaktadır. Animal adında bir üst tip oluşturarak DRY ilkesine uyacak şekilde düzenlenebilir.
+
+function Animal() {};
+
+Animal.prototype = {
+    constructor: Animal,
+    describe: function() {
+        console.log(this.name);
+    }
+}
+
+Bird.prototype = {
+    constructor: Bird,
+}
+
+Dog.prototype = {
+    constructor: Dog,
+}

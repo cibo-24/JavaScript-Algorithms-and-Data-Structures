@@ -1,0 +1,18 @@
+Bir Nesnenin Prototipinin Nereden Geldiğini Anlama
+
+Tıpkı insanların genlerini ebeveynlerinden miras almaları gibi, bir nesne de prototipini doğrudan kendisini oluşturan kurucu fonksiyondan miras alır. 
+
+Örneğin, burada Bird kurucusu ördek nesnesini oluşturur:
+
+function Bird(name) {
+    this.name = name;
+}
+
+let duck = new Bird ("Donald");
+
+duck object'inin nereden miras aldığını öğrenmek için isPrototypeOf ile bunu anlayabiliriz.
+
+Bird.prototype.isPrototypeOf(duck); // true
+
+duck nesnesi prototype' propertylerini Bird'den alır.
+

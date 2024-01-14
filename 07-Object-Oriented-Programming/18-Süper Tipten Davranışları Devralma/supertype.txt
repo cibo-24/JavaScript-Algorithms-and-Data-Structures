@@ -1,0 +1,24 @@
+Bir Süper Tipten Davranışları Devralma
+
+Bir önceki görevde, tüm hayvanlar tarafından paylaşılan davranışları tanımlayan Animal adında bir süper tip oluşturdunuz:
+
+function Animal () {
+    Animal.prototype.eat = function () {
+        console.log("nom nom");
+    }
+}
+
+
+Bu ve bir sonraki zorluk, Kuş ve Köpek içindeki Hayvan metotlarının tekrar tanımlanmadan nasıl yeniden kullanılacağını ele alacaktır. Kalıtım adı verilen bir teknik kullanır. Bu zorluk ilk adımı kapsar: süper tipin (veya ebeveynin) bir örneğini oluşturmak. New operatörünü kullanarak bir Animal örneği oluşturmanın bir yolunu zaten biliyorsunuz:
+
+let animal = new Animal();
+
+Kalıtım için bu sözdizimini kullanırken bazı dezavantajlar vardır ve bunlar bu mücadelenin kapsamı için çok karmaşıktır. Bunun yerine, işte bu dezavantajları olmayan alternatif bir yaklaşım:
+
+let animal = Object.create(Animal.prototype);
+
+Object.create(obj) yeni bir nesne oluşturur ve obj'yi yeni nesnenin prototipi olarak ayarlar. Prototipin bir nesne oluşturmak için kullanılan "tarif" gibi olduğunu hatırlayın. animal'ın prototipini Animal'ın prototipi olarak ayarlayarak, animal örneğine diğer Animal örnekleriyle aynı "tarifi" vermiş olursunuz.
+
+animal.eat(),
+animal intanceof Animal; // true 
+

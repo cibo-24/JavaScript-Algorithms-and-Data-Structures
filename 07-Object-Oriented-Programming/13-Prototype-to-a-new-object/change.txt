@@ -1,0 +1,29 @@
+Prototipi Yeni Bir Nesneyle Değiştirme
+Şu ana kadar prototipe tek tek özellikler ekliyordunuz:
+
+Bird.prototype.numLegs = 2;
+
+-------
+
+Bird.prototype.eat = function () {
+    console.log("nom nom nom");
+}
+
+Bird.prototype.describe = function () {
+    console.log("My name is" + this.name );
+}
+
+Bunları tek seferde de ekleyebiliriz.
+
+Bird.prototype = {
+    numLegs: 2,
+    eat: function () {
+        console.log("nom nom nom");
+    },
+    describe: function () {
+        console.log("My name is " + this.name);
+    }
+};
+
+Bu şekilde tek bir prototype yerine birden çok prototype'i tek seferde ekleyebiliriz.
+

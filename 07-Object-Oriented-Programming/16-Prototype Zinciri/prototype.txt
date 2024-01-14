@@ -1,0 +1,22 @@
+Prototip Zincirini Anlayın
+
+JavaScript'teki tüm nesnelerin (birkaç istisna dışında) bir prototipi vardır. 
+Ayrıca, bir nesnenin prototipinin kendisi de bir nesnedir.
+
+function Bird (name) {
+    this._name = name;
+}
+
+typeof Bird.prototype; // object
+
+Object.prototype.isPrototypeOf(Bird.prototype);
+
+-> hasOwnProperty özelliğini hatırlayalım
+
+let duck = new Bird("Donal");
+duck.hasOwnProperty("name");
+
+Not: Bird duck için süper tiptir. Duck ise alt tiptir. object hem Bird hem de duck için süper tiptir.
+
+Object, JS'deki tüm nesneler için süper tiptir.
+Bu neden herhangi bir nesne hasOwnProperty yöntemini kullanabilir.

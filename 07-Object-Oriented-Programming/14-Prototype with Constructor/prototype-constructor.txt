@@ -1,0 +1,23 @@
+Prototipi Değiştirirken Kurucu Özelliğini Ayarlamayı Unutmayın
+
+Prototipi manuel olarak yeni bir nesneye ayarlamanın çok önemli bir yan etkisi vardır. Yapıcı özelliğini siler! 
+Bu özellik, örneği hangi kurucu işlevin oluşturduğunu kontrol etmek için kullanılabilir, ancak özelliğin üzerine yazıldığı için artık yanlış sonuçlar verir:
+
+duck.constructor === Bird; // false
+duck.constructor === Object; // true
+duck instanceof Bird; // true 
+
+
+!!!!!!!
+Bird.prototype = {
+    constructor: Bird,
+    numLegs: 2,
+    eat: function () {
+        console.log("nom nom);
+    },
+    describe: function () {
+        console.log("My name is" + this.name);
+    }
+}
+
+

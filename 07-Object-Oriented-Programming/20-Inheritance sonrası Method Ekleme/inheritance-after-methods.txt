@@ -1,0 +1,18 @@
+function Animal() { }
+Animal.prototype.eat = function() {
+  console.log("nom nom nom");
+};
+function Bird() { }
+Bird.prototype = Object.create(Animal.prototype);
+Bird.prototype.constructor = Bird; // constructor ayarlaması yaptık. Bird'ın constructor'ı Bird olarak ayarlandı.
+
+Bird.prototype.fly = function () {
+    console.log("I'm flying!);
+}
+
+let duck = new Bird();
+duck.eat();
+duck.fly();
+
+Dog nesnesinin Animal'dan miras alması ve Dog'un prototip kurucusunun Dog olarak ayarlanması için gerekli tüm kodu ekleyin. Ardından Dog nesnesine bir bark() yöntemi ekleyin, böylece beagle hem eat() hem de bark() yapabilir. bark() yöntemi konsola Woof! yazdırmalıdır.
+
