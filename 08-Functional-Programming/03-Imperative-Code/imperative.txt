@@ -1,0 +1,18 @@
+JavaScript, yaygın görevleri yerine getiren birçok önceden tanımlanmış yöntem sunar, böylece bilgisayarın bunları nasıl gerçekleştirmesi gerektiğini yazmanıza gerek kalmaz.
+
+Örneğin,  for döngüsünü kullanmak yerine, bir dizi üzerinde yinelemenin ayrıntılarını ele alan map yöntemini çağırabilirsiniz. Bu, Hata Ayıklama bölümünde ele alınan "Off By One Hataları" gibi anlamsal hataların önlenmesine yardımcı olur.
+
+Senaryoyu düşünün: tarayıcınızda web'de geziniyorsunuz ve açtığınız sekmeleri takip etmek istiyorsunuz. Bunu bazı basit nesne yönelimli kodlar kullanarak modellemeye çalışalım.
+
+Bir Pencere nesnesi sekmelerden oluşur ve genellikle birden fazla Pencere açık olur. Her Window nesnesindeki her açık sitenin başlığı bir dizide tutulur. Tarayıcıda çalıştıktan sonra (yeni sekmeler açma, pencereleri birleştirme ve sekmeleri kapatma), hala açık olan sekmeleri yazdırmak istersiniz. Kapatılan sekmeler diziden kaldırılır ve yeni sekmeler (basitlik için) dizinin sonuna eklenir.
+
+Kod düzenleyici, tabOpen(), tabClose() ve join() işlevleriyle bu işlevin bir uygulamasını gösterir. Tabs dizisi, açık sayfaların adını saklayan Window nesnesinin bir parçasıdır.
+
+
+Editördeki kodu inceleyin. Programda yan etkileri olan ve yanlış davranışa neden olan bir yöntem kullanıyor. finalTabs.tabs dosyasında saklanan açık sekmelerin son listesi ['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'yeni sekme', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'yeni sekme'] olmalıdır ancak kod tarafından üretilen liste biraz farklıdır.
+
+Window.prototype.tabClose öğesini doğru sekmeyi kaldıracak şekilde değiştirin.
+
+
+
+

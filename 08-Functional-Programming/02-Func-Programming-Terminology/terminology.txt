@@ -1,0 +1,19 @@
+Fonksiyonel Programlama Terminolojisini Anlama
+
+FCC Ekibinin ruh hali değişti ve şimdi iki tür çay istiyor: yeşil çay ve siyah çay. Genel Gerçek: Müşterinin ruh halindeki değişimler oldukça yaygındır.
+
+Bu bilgilerle, çeşitli çay isteklerini ele almak için son mücadeledeki getTea fonksiyonunu tekrar ziyaret etmemiz gerekecek. Hazırladığı çay türünü değiştirebilmek için getTea fonksiyonunu parametre olarak bir fonksiyon kabul edecek şekilde değiştirebiliriz. Bu getTea'yi daha esnek hale getirir ve müşteri istekleri değiştiğinde programcıya daha fazla kontrol sağlar.
+
+Ama önce, bazı işlevsel terminolojiyi ele alalım:
+
+Geri aramalar, başka bir fonksiyonun çağrılmasına karar vermek için bu fonksiyonun içine yerleştirilen veya geçirilen fonksiyonlardır. Bunları başka yöntemlere aktarılırken görmüş olabilirsiniz, örneğin filter'da geri arama işlevi JavaScript'e bir dizinin nasıl filtreleneceğine ilişkin kriterleri söyler.
+
+Normal bir değer gibi bir değişkene atanabilen, başka bir fonksiyona aktarılabilen veya başka bir fonksiyondan döndürülebilen fonksiyonlara birinci sınıf fonksiyonlar denir. JavaScript'te tüm fonksiyonlar birinci sınıf fonksiyonlardır.
+
+Argüman olarak bir fonksiyon alan veya dönüş değeri olarak bir fonksiyon döndüren fonksiyonlara yüksek dereceli fonksiyonlar denir.
+
+Fonksiyonlar başka bir fonksiyona aktarıldığında veya başka bir fonksiyondan döndürüldüğünde, aktarılan veya döndürülen fonksiyonlar lambda olarak adlandırılabilir.
+
+27 fincan yeşil çay ve 13 fincan siyah çay hazırlayın ve bunları sırasıyla tea4GreenTeamFCC ve tea4BlackTeamFCC değişkenlerinde saklayın. getTea fonksiyonunun değiştirildiğini ve artık ilk argüman olarak bir fonksiyon aldığını unutmayın.
+
+Not: Veri (çay bardağı sayısı) son bağımsız değişken olarak sağlanır. Bunu daha sonraki derslerde tartışacağız.

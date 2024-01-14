@@ -1,0 +1,15 @@
+Fonksiyonel Programlama Hakkında Bilgi Edinin
+
+Fonksiyonel programlama, çözümlerin fonksiyon kapsamı dışında herhangi bir yan etkisi olmayan basit, izole fonksiyonlar olduğu bir programlama tarzıdır: GIRDI -> IŞLEM -> ÇIKTI
+
+Fonksiyonel programlama hakkında:
+
+İzole fonksiyonlar - değişime tabi olan global değişkenleri içeren programın durumuna bağımlılık yoktur.
+
+Saf fonksiyonlar - aynı girdi her zaman aynı çıktıyı verir.
+
+Sınırlı yan etkiye sahip fonksiyonlar - fonksiyonun dışında programın durumunda yapılan değişiklikler veya mutasyonlar dikkatle kontrol edilir.
+
+freeCodeCamp üyeleri çayı çok severler.
+
+Kod düzenleyicide, prepareTea ve getTea fonksiyonları sizin için zaten tanımlanmıştır. Takım için 40 bardak çay almak üzere getTea fonksiyonunu çağırın ve bunları tea4TeamFCC değişkeninde saklayın.

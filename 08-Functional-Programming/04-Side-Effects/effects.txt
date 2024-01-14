@@ -1,0 +1,16 @@
+Fonksiyonel Programlama Kullanarak Mutasyonlardan ve Yan Etkilerden Kaçının
+
+
+Eğer henüz anlamadıysanız, bir önceki görevdeki sorun tabClose() fonksiyonundaki splice çağrısı ile ilgiliydi. Ne yazık ki, splice çağrıldığı orijinal diziyi değiştirir, bu nedenle ikinci çağrıda değiştirilmiş bir dizi kullanılır ve beklenmedik sonuçlar verir.
+
+Bu, çok daha büyük bir modelin küçük bir örneğidir - bir değişken, dizi veya nesne üzerinde bir işlev çağırırsınız ve işlev değişkeni veya nesnedeki bir şeyi değiştirir.
+
+Fonksiyonel programlamanın temel prensiplerinden biri, bir şeyleri değiştirmemektir. Değişiklikler hatalara yol açar. Fonksiyonlarınızın, fonksiyon argümanları veya herhangi bir global değişken de dahil olmak üzere hiçbir şeyi değiştirmediğini bilerek hataları önlemek daha kolaydır.
+
+Önceki örnekte karmaşık işlemler yoktu, ancak splice yöntemi orijinal diziyi değiştirdi ve bir hataya neden oldu.
+
+İşlevsel programlamada, bir şeyleri değiştirmeye veya başkalaştırmaya mutasyon, sonuca da yan etki denildiğini hatırlayın. İdeal olarak bir fonksiyon saf bir fonksiyon olmalıdır, yani herhangi bir yan etkiye neden olmaz.
+
+Bu disiplinde ustalaşmaya çalışalım ve kodumuzdaki hiçbir değişkeni veya nesneyi değiştirmeyelim.
+
+Global değişken fixedValue'nun değerini bir artırılmış olarak döndürmesi için incrementer fonksiyonunun kodunu doldurun.

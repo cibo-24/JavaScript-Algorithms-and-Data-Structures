@@ -1,0 +1,17 @@
+Bir İşlevde Dış Bağımlılığı Önlemek için Bağımsız Değişkenleri Geçme
+
+Son meydan okuma işlevsel programlama ilkelerine bir adım daha yaklaştırdı, ancak hala eksik bir şeyler var.
+
+Global değişken değerini değiştirmedik, ancak global değişken fixedValue olmadan fonksiyon artırıcı çalışmayacaktır.
+
+Fonksiyonel programlamanın bir diğer ilkesi de bağımlılıklarınızı her zaman açıkça beyan etmektir. Bu, bir fonksiyon bir değişken veya nesnenin varlığına bağlıysa, bu değişken veya nesneyi doğrudan fonksiyona bir argüman olarak aktarmak anlamına gelir.
+
+Bu prensibin birkaç iyi sonucu vardır. Fonksiyonun test edilmesi daha kolaydır, tam olarak hangi girdiyi aldığını bilirsiniz ve programınızdaki başka hiçbir şeye bağlı olmaz.
+
+Bu, kodu değiştirirken, kaldırırken veya yeni kod eklerken size daha fazla güven verebilir. Neyi değiştirip değiştiremeyeceğinizi bilirsiniz ve potansiyel tuzakların nerede olduğunu görebilirsiniz.
+
+Son olarak, fonksiyon, kodun hangi bölümü tarafından çalıştırılırsa çalıştırılsın, aynı girdi kümesi için her zaman aynı çıktıyı üretecektir.
+
+Bağımlılıklarını açıkça beyan etmek için incrementer fonksiyonunu güncelleyelim.
+
+Incrementer fonksiyonunu bir argüman alacak ve değeri bir artırdıktan sonra bir sonuç döndürecek şekilde yazın.

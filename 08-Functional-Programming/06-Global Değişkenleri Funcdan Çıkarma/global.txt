@@ -1,0 +1,9 @@
+Global Değişkenleri Fonksiyonlardan Çıkarma
+
+Şimdiye kadar fonksiyonel programlama için iki farklı prensip gördük:
+
+Bir değişkeni veya nesneyi değiştirmeyin - yeni değişkenler ve nesneler oluşturun ve gerekirse bunları bir fonksiyondan döndürün. İpucu: const newArr = arrVar gibi bir şey kullanmak, burada arrVar bir dizidir, sadece mevcut değişkene bir referans oluşturacaktır, bir kopya değil. Yani newArr'daki bir değeri değiştirmek arrVar'daki değeri değiştirecektir.
+
+Fonksiyon parametrelerini beyan edin - bir fonksiyon içindeki herhangi bir hesaplama, herhangi bir global nesne veya değişkene değil, yalnızca fonksiyona aktarılan argümanlara bağlıdır.
+
+Bir sayıya bir eklemek çok heyecan verici değildir, ancak dizilerle veya daha karmaşık nesnelerle çalışırken bu ilkeleri uygulayabiliriz.

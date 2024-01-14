@@ -1,0 +1,28 @@
+Şimdiye kadar bir programda yan etkilerden kaçınmak için saf fonksiyonlar kullanmayı öğrendik. Ayrıca, bir fonksiyonun sadece girdi argümanlarına bağlı olmasının değerini gördük.
+
+Bu sadece başlangıç. Adından da anlaşılacağı gibi, fonksiyonel programlama bir fonksiyon teorisi etrafında şekillenir.
+
+Bunları diğer fonksiyonlara argüman olarak aktarabilmek ve başka bir fonksiyondan bir fonksiyon döndürebilmek mantıklı olacaktır. Fonksiyonlar JavaScript'te birinci sınıf nesneler olarak kabul edilir, bu da diğer nesneler gibi kullanılabilecekleri anlamına gelir. Değişkenlere kaydedilebilir, bir nesnede saklanabilir veya fonksiyon argümanları olarak geçirilebilirler.
+
+Dizi nesnesi prototipi üzerindeki metotlar olan bazı basit dizi fonksiyonları ile başlayalım. Bu alıştırmada Array.prototype.map() ya da daha basitçe map'i inceleyeceğiz.
+
+map yöntemi, bir dizideki her öğe üzerinde yineleme yapar ve her öğe üzerinde geri arama işlevinin çağrılmasının sonuçlarını içeren yeni bir dizi döndürür. Bunu orijinal diziyi değiştirmeden yapar.
+
+Geri arama kullanıldığında, üç bağımsız değişken aktarılır. İlk bağımsız değişken işlenmekte olan geçerli öğedir. İkincisi bu öğenin indeksi, üçüncüsü ise map yönteminin çağrıldığı dizidir.
+
+Eleman olarak yalnızca kullanıcıların adlarını içeren yeni bir dizi döndürmek için users dizisi üzerinde map yöntemini kullanan bir örnek için aşağıya bakın. Basitlik açısından, örnekte yalnızca geri aramanın ilk bağımsız değişkeni kullanılmıştır.
+
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+
+const names = users.map(user => user.name );
+console.log(names)
+
+[ 'John', 'Amy', 'camperCat' ].
+
+watchList dizisi, çeşitli filmler hakkında bilgi içeren nesneleri tutar. Yeni bir nesne dizisini ratings değişkenine atamak için map on watchList öğesini kullanın. Yeni dizideki her film yalnızca filmin adını içeren bir başlık anahtarına ve IMDB derecelendirmesini içeren bir derecelendirme anahtarına sahip olmalıdır. Düzenleyicideki kod şu anda bunu yapmak için bir for döngüsü kullanmaktadır, bu nedenle döngü işlevini map ifadenizle değiştirmelisiniz.
+
+
