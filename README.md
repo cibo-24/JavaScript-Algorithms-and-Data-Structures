@@ -8,4 +8,4 @@
 Certification: 
 https://www.freecodecamp.org/certification/CIBOKENAN24/javascript-algorithms-and-data-structures
 
-# Kenan Cibooğlu
+# Author:  Kenan Cibooğlu
