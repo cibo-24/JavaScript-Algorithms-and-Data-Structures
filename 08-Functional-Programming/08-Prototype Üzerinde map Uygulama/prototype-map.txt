@@ -1,0 +1,10 @@
+Prototip üzerinde map uygulama
+
+Daha önce Array.prototype.map() ya da sadece map() metodunu uygularken gördüğünüz gibi, map metodu çağrıldığı diziyle aynı uzunlukta bir dizi döndürür.
+ Ayrıca, geri çağırma işlevi değiştirmediği sürece orijinal diziyi de değiştirmez.
+
+ Başka bir deyişle, map saf bir fonksiyondur ve çıktısı yalnızca girdilerine bağlıdır. Ayrıca, argüman olarak başka bir fonksiyon alır.
+
+ Kendi versiyonunuzu uygularsanız map metodu hakkında çok şey öğrenebilirsiniz. Bir for döngüsü veya Array.prototype.forEach() kullanmanız önerilir.
+
+ Tam olarak Array.prototype.map() gibi davranması gereken kendi Array.prototype.myMap() metodunuzu yazın. Yerleşik map yöntemini kullanmamalısınız. Array örneğine myMap yönteminde this kullanılarak erişilebilir.

@@ -1,0 +1,33 @@
+Bir Diziden Veri Ayıklamak için Filtre Yöntemini Kullanma
+
+Bir başka kullanışlı dizi işlevi de Array.prototype.filter() ya da kısaca filter() işlevidir.
+
+filter, bir dizinin her bir elemanı üzerinde bir fonksiyon çağırır ve yalnızca bu fonksiyonun doğru değer döndürdüğü elemanları içeren yeni bir dizi döndürür - yani, Boolean() yapıcısına aktarıldığında true değerini döndüren bir değer. Başka bir deyişle, kendisine aktarılan fonksiyona bağlı olarak diziyi filtreler. Map gibi, bunu orijinal diziyi değiştirmeye gerek kalmadan yapar.
+
+Geri arama işlevi üç bağımsız değişken kabul eder. İlk bağımsız değişken, işlenmekte olan geçerli öğedir. İkincisi bu öğenin indeksi, üçüncüsü ise filtre yönteminin çağrıldığı dizidir.
+
+Yalnızca 30 yaşın altındaki kullanıcıları içeren yeni bir dizi döndürmek için users dizisinde filtre yöntemini kullanan bir örnek için aşağıya bakın. Basitlik açısından, örnekte geri aramanın yalnızca ilk bağımsız değişkeni kullanılmıştır.
+
+const users = [
+    {name: "John", age: 34},
+    {name : "Amy", age: 20},
+    {name: "camperCat", age: 10},
+];
+
+const usersUnder30 = users.filter(user => {
+    user.age < 30 
+})
+
+consol..log(usersUnder30);
+
+veya....
+
+const under = users.filter(user => {
+    if(user.age > 10 && user.age < 30 ) {
+        users.push("Kenan", 28);
+    }else {
+        console.log("sorry");
+    }
+});
+
+watchList değişkeni, birkaç film hakkında bilgi içeren bir nesne dizisi tutar. Yalnızca başlık ve derecelendirme anahtarlarını içeren yeni bir nesne dizisi atamak için watchList üzerinde filtre ve eşleme kombinasyonunu kullanın. Yeni dizi yalnızca imdbRating değerinin 8.0'a eşit veya daha büyük olduğu nesneleri içermelidir. Derecelendirme değerlerinin nesne içinde dizeler olarak kaydedildiğini ve üzerlerinde matematiksel işlemler gerçekleştirmek için bunları sayılara dönüştürmeniz gerekebileceğini unutmayın.

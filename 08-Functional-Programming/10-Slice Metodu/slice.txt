@@ -1,0 +1,10 @@
+Slice ile Dizinin bir bölümünü döndürmek
+
+Slice yöntemi, bir dizinin belirli öğelerinin bir kopyasını döndürür.
+İki bağımsız değişken alabilir; birincisi dilimin nereden başlayacağının indeksini verir, ikincisi ise dilimin nerede biteceğinin indeksidir (ve kapsayıcı değildir). 
+Argümanlar sağlanmazsa, varsayılan değer dizinin başından sonuna kadar başlamaktır, bu da tüm dizinin bir kopyasını oluşturmanın kolay bir yoludur. Slice yöntemi orijinal diziyi değiştirmez, ancak yeni bir dizi döndürür.
+
+const arr = ["cat", "dog", "tiger"];
+const newArray = arr.slice(1,3); // "dog", "tiger"
+
+Sağlanan beginSlice ve endSlice indexleri verilen animasyon dizisinin bir kısmını döndürmek için sliceArray işlevindeki slice yöntemini kullanın. Fonksiyon bir dizi döndürmelidir.
