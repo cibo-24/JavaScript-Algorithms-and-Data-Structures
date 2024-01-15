@@ -6,6 +6,6 @@
 
 
 Certification: 
-<a href="https://www.freecodecamp.org/certification/CIBOKENAN24/javascript-algorithms-and-data-structures">
+https://www.freecodecamp.org/certification/CIBOKENAN24/javascript-algorithms-and-data-structures
 
 # Kenan Cibooğlu
